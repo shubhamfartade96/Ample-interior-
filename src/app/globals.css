@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%; /* #1F2937 */
+    --card: 261 56% 95%; /* #EFEAF8 */
+    --card-foreground: 222 47% 11%;
+    --popover: 300 100% 98%; /* #FAF5FF */
+    --popover-foreground: 222 47% 11%;
+    --primary: 262 84% 60%; /* #7C3AED */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 216 34% 80%; /* #6B7280 */
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 259 92% 66%; /* #8B5CF6 */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 259 92% 66%; /* #8B5CF6 */
+    --input: 214.3 31.8% 91.4%;
+    --ring: 262 84% 60%; /* #7C3AED */
+    --radius: 1rem;
+
+    --nav-background: 220 44% 8%;
+    --nav-foreground: 220 13% 91%;
+  }
+
+  .dark {
+    --background: 222 47% 11%; /* #1F2937 */
+    --foreground: 210 40% 98%;
+    --card: 261 56% 95%; /* #EFEAF8 */
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 15%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 262 84% 60%; /* #7C3AED */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 216 34% 30%; /* Darker secondary */
+    --secondary-foreground: 210 40% 98%;
+    --muted: 222 47% 15%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+    --accent: 259 92% 66%; /* #8B5CF6 */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 259 92% 50%; /* Darker border */
+    --input: 222 47% 15%;
+    --ring: 262 84% 60%; /* #7C3AED */
+
+    --nav-background: 220 44% 8%;
+    --nav-foreground: 220 13% 91%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: hsl(var(--foreground));
+  }
+  p {
+    color: hsl(var(--secondary-foreground));
+  }
+  .bg-primary {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+   .text-primary {
+    color: hsl(var(--accent));
+  }
+}

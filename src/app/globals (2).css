@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 35 33% 96%; /* beige-100 */
+    --foreground: 210 5% 23%; /* charcoal-800 */
+ 
+    --card: 35 33% 96%;
+    --card-foreground: 210 5% 23%;
+ 
+    --popover: 35 33% 96%;
+    --popover-foreground: 210 5% 23%;
+ 
+    --primary: 43 74% 49%; /* gold-500 */
+    --primary-foreground: 210 5% 23%;
+ 
+    --secondary: 35 33% 96%; /* beige-100 */
+    --secondary-foreground: 210 5% 23%; /* charcoal-800 */
+ 
+    --muted: 36 25% 90%; /* warm-beige */
+    --muted-foreground: 210 5% 43%;
+ 
+    --accent: 43 74% 49%; /* gold-500 */
+    --accent-foreground: 210 5% 23%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 35 33% 96%;
+
+    --border: 36 25% 85%;
+    --input: 36 25% 85%;
+    --ring: 43 74% 49%;
+ 
+    --radius: 0.5rem;
+
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+
+    --chatbot: 265 53% 55%;
+    --chatbot-foreground: 35 33% 96%;
+  }
+ 
+  .dark {
+    --background: 210 5% 12%; /* charcoal-950 */
+    --foreground: 35 33% 96%; /* beige-100 */
+ 
+    --card: 210 5% 12%;
+    --card-foreground: 35 33% 96%;
+ 
+    --popover: 210 5% 12%;
+    --popover-foreground: 35 33% 96%;
+ 
+    --primary: 43 74% 49%; /* gold-500 */
+    --primary-foreground: 210 5% 12%;
+ 
+    --secondary: 210 5% 12%; /* charcoal-950 */
+    --secondary-foreground: 35 33% 96%; /* beige-100 */
+ 
+    --muted: 210 5% 23%; /* charcoal-800 */
+    --muted-foreground: 36 25% 70%;
+ 
+    --accent: 43 74% 49%;
+    --accent-foreground: 210 5% 12%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+ 
+    --border: 210 5% 23%;
+    --input: 210 5% 23%;
+    --ring: 43 74% 49%;
+
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    
+    --chatbot: 265 53% 55%;
+    --chatbot-foreground: 35 33% 96%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply !m-0;
+  }
+}
