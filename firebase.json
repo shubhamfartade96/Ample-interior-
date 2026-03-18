@@ -1,0 +1,24 @@
+
+{
+  "hosting": {
+    "site": "aiassist-ohacv",
+    "public": "public",
+    "cleanUrls": true,
+    "rewrites": [
+      {
+        "source": "**",
+        "apphosting": {
+          "backendId": "studio",
+          "region": "us-central1"
+        }
+      }
+    ]
+  },
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}
+

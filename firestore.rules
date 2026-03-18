@@ -1,0 +1,16 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow public write access to the "leads" collection for lead capture.
+    match /leads/{leadId} {
+      allow create: if true;
+      allow read, update, delete: if false; // Secure other operations
+    }
+    
+    // Disallow all other reads/writes by default
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
